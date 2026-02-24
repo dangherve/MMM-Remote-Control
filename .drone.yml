@@ -39,6 +39,7 @@ steps:
   - name: sync repo
     commands:
       - git remote add upstream https://github.com/Jopyth/MMM-Remote-Control.git
+      - git fetch
       - git status
       - git checkout master
       - git fetch upstream
