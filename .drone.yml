@@ -1,10 +1,15 @@
 kind: pipeline
 type: exec
-name: Check main branch
+name: cronRebaseDevelop
 
 platform:
   os: linux
   arch: amd64
+
+trigger:
+    branch:
+        include:
+            - master
 
 steps:
   - name: sync repo
@@ -15,3 +20,27 @@ steps:
       - git remote set-url origin git@github.com:dangherve/MMM-Remote-Control.git
       - git push --force --set-upstream origin master
 
+
+
+kind: pipeline
+type: exec
+name: rebaseDevelop
+
+platform:
+  os: linux
+  arch: amd64
+
+trigger:
+    branch:
+        exclude:
+            - master
+
+steps:
+  - name: sync repo
+    commands:
+      - git remote add upstream https://github.com/Jopyth/MMM-Remote-Control.git
+      - git checkout master
+      - git fetch upstream
+      - git rebase upstream/master
+      - git remote set-url origin git@github.com:dangherve/MMM-Remote-Control.git
+      - git push --force --set-upstream origin master
