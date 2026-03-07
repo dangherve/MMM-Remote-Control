@@ -1,0 +1,6 @@
+#!/bin/bash
+git remote add upstream https://github.com/Jopyth/MMM-Remote-Control.git
+git fetch upstream
+git rebase upstream/master
+git remote set-url origin git@github.com:dangherve/MMM-Remote-Control.git
+git push --force --set-upstream origin master
