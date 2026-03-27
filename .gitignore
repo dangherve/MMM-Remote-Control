@@ -5,3 +5,5 @@ coverage/
 docs/simplification.md
 
 !buildTools
+
+!.woodpecker
