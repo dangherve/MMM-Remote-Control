@@ -1,4 +1,4 @@
-/* Unit tests for lib/utils.js using Node's built-in test runner */
+// Unit tests for lib/utils.js using Node's built-in test runner.
 const assert = require("node:assert/strict");
 const {test, describe} = require("node:test");
 const {capitalizeFirst, includes} = require("../../lib/utils");

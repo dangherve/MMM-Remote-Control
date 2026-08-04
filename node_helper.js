@@ -61,8 +61,6 @@ Module = {
   notificationHandler: {},
   register (name, moduleDefinition) {
     Module.configDefaults[name] = moduleDefinition.defaults;
-
-    /* API EXTENSION - Added v2.0.0 */
     Module.notificationHandler[name] = "notificationReceived" in moduleDefinition
       ? moduleDefinition.notificationReceived.toString()
       : "";
@@ -103,8 +101,6 @@ module.exports = NodeHelper.create({
     this.thisConfig = result.thisConfig;
     this.updateModuleList();
     this.createRoutes();
-
-    /* API EXTENSION - Added v2.0.0 */
     this.externalApiRoutes = {};
     this.moduleApiMenu = {};
     this.customMenu = {};
@@ -120,8 +116,7 @@ module.exports = NodeHelper.create({
 
   onModulesLoaded () {
 
-    /* CALLED AFTER MODULES AND CONFIG DATA ARE LOADED */
-    /* API EXTENSION - Added v2.0.0 */
+    // CALLED AFTER MODULES AND CONFIG DATA ARE LOADED
     this.getExternalApiByGuessing();
 
     this.loadTimers();
@@ -1153,8 +1148,6 @@ module.exports = NodeHelper.create({
 
         break;
       default: if (notification === "REGISTER_API" && "module" in payload) {
-
-        /* API EXTENSION -- added v2.0.0 */
         if ("actions" in payload && Object.keys(payload.actions).length > 0) {
           this.externalApiRoutes[payload.module] = payload;
         } else {
