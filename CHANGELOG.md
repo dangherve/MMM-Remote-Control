@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.1.1](https://github.com/jopyth/MMM-Remote-Control/compare/v5.1.0...v5.1.1) (2026-08-07)
+
+### Chores
+
+- fix new linter issues ([445482b](https://github.com/jopyth/MMM-Remote-Control/commit/445482bbfc4203f3e3a1291fb56e405065524923))
+- update dependencies ([99ea6de](https://github.com/jopyth/MMM-Remote-Control/commit/99ea6deae96eb6ebedcbe713127e430cc35d800e))
+- update GitHub Actions ([2fadfbc](https://github.com/jopyth/MMM-Remote-Control/commit/2fadfbcdba2c47adff640451a27bd2f91303f110))
+
 ## [5.1.0](https://github.com/jopyth/MMM-Remote-Control/compare/v5.0.6...v5.1.0) (2026-07-21)
 
 ### Added
